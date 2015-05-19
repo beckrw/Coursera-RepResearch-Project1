@@ -64,7 +64,7 @@ summary2 <- summarise(by.interval, average.steps=mean(steps, na.rm=TRUE))
 ggplot(data=summary2, aes(x=interval, y=average.steps, group=1)) + geom_line() + xlab("5-Minute Interval") + ylab("Average Number of Steps Taken Across All Days") + ggtitle("Average Number of Steps Taken Across All Days at 5-Minute Interval")
 ```
 
-![](Coursera-RepResearch-Project1/figures-html/unnamed-chunk-1.png) 
+![](Coursera-RepResearch-Project1/figures/unnamed-chunk-1.png) 
 
 Use which.max to report Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps
 
