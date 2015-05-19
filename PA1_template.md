@@ -39,7 +39,7 @@ summary1 <- summarise(by.date, total.steps=sum(steps, na.rm=TRUE))
 ggplot(data=summary1, aes(summary1$total.steps)) + geom_histogram(col="red", fill="green") + labs(title="Total Number of Steps Taken Each Day") + labs(x="Total Number of Steps", y="Count")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
+![](/figures/unnamed-chunk-1.png)
 
 Use summary to report the mean and median of the total number of steps taken per day
 
@@ -64,7 +64,7 @@ summary2 <- summarise(by.interval, average.steps=mean(steps, na.rm=TRUE))
 ggplot(data=summary2, aes(x=interval, y=average.steps, group=1)) + geom_line() + xlab("5-Minute Interval") + ylab("Average Number of Steps Taken Across All Days") + ggtitle("Average Number of Steps Taken Across All Days at 5-Minute Interval")
 ```
 
-![](/figures/unnamed-chunk-1.png) 
+![](/figures/unnamed-chunk-2.png) 
 
 Use which.max to report Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps
 
@@ -118,7 +118,7 @@ summary3 <- summarise(by.date, total.steps=sum(steps, na.rm=TRUE))
 ggplot(data=summary3, aes(summary3$total.steps)) + geom_histogram(col="red", fill="green") + labs(title="Total Number of Steps Taken Each Day") + labs(x="Total Number of Steps", y="Count")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-8-1.png) 
+![](/figures/unnamed-chunk-5.png) 
 
 Use summary to report the mean and median of the total number of steps taken per day on the new dataset
 
@@ -147,4 +147,4 @@ summary4 <- summarise(by.interval, average.steps=mean(steps, na.rm=TRUE))
 ggplot(summary4, aes(x=interval, y=average.steps, group=1)) + geom_line()  + geom_line() + xlab("5-Minute Interval") + ylab("Average Number of Steps Taken Across All Days") + ggtitle("Average Number of Steps Taken Across All Days at 5-Minute Interval") + facet_wrap(~weekdays, ncol=1)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-10-1.png) 
+![](/figures/unnamed-chunk-6.png) 
